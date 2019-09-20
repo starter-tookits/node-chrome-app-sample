@@ -1,0 +1,21 @@
+name: lint
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: node-10-browsers
+        uses: aquariuslt/node-browsers-github-actions@v1.0.0
+      - name: Install and prettier
+        run: |
+          yarn run install
+          yarn run prettier --write src/**/*.{ts,tsx}
