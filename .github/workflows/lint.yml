@@ -19,5 +19,5 @@ jobs:
         uses: aquariuslt/node-browsers-github-actions@master
       - name: Install and prettier
         run: |
-          yarn run install
-          yarn run prettier --write src/**/*.{ts,tsx}
+          yarn install
+          yarn run prettier --write src/**/*.js
