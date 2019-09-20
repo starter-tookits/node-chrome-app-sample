@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: node-10-browsers
-        uses: aquariuslt/node-browsers-github-actions@v1.0.0
+        uses: aquariuslt/node-browsers-github-actions@master
       - name: Install and prettier
         run: |
           yarn run install
