@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: SCM
+        uses: actions/checkout@v1
       - name: node-10-browsers
         uses: aquariuslt/node-browsers-github-actions@master
       - name: Install and prettier
